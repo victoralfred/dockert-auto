@@ -3,7 +3,7 @@ import { HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { FormconfigService } from './../../formconfig.service';
 import { NgForm } from '@angular/forms';
 
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
   selector: 'app-new-instance',
