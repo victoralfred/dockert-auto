@@ -14,17 +14,17 @@ export class FormconfigService {
   constructor(private http: HttpClient) { }
 
     createDocker(docker) {
-      return this.http.put('http://127.0.0.1:5002/instance',docker, httpOptions).subscribe
+      const jsondata = JSON.stringify(docker)
+      return this.http.post('http://127.0.0.1:5000/instance', jsondata , httpOptions).subscribe
       (
-        (response)=>{
-          console.log(response)
+        (response) => {
+          console.log(response);
         },
-        (error)=>{
-          console.log(error)
+        (error) => {
+          console.log(error);
         }
       );
-     
-  }
+       }
 
 }
 

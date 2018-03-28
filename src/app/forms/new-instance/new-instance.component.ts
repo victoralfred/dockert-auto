@@ -19,12 +19,12 @@ export class NewInstanceComponent implements OnInit {
   ngOnInit() {
   }
   onSubmitSignUp() {
-      const data : DockerData = {
+      const data: DockerData = {
         email: this.signup.value.email,
         instance: this.signup.value.instance,
         version: this.signup.value.versionGroup.version
       }
-      this._formserv.createDocker(data)
+      this._formserv.createDocker(data);
       }
 
 }
